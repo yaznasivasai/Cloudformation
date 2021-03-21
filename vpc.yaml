@@ -1,0 +1,12 @@
+AWSTemplateFormatVersion: "2010-09-09"
+
+myVPC:
+  Type: AWS::EC2::VPC
+  Properties:
+    CidrBlock: 100.10.10.0/16
+    EnableDnsSupport: "false"
+    EnableDnsHostnames: "false"
+    InstanceTenancy: dedicated
+    Tags:
+      - Key: custom
+        Value: trial
